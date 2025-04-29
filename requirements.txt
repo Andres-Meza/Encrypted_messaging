@@ -1,0 +1,24 @@
+# API REST (HTTP + JWT)
+flask                # Framework para construir APIs REST
+flask-jwt-extended   # Extensión para autenticación JWT en Flask
+
+# gRPC
+grpcio               # Cliente y servidor gRPC
+grpcio-tools         # Herramientas para generar código a partir de archivos .proto
+protobuf             # Serialización de datos (usada por gRPC)
+
+# RabbitMQ (AMQP)
+pika                 # Cliente para RabbitMQ usando el protocolo AMQP
+
+# MQTT
+paho-mqtt            # Cliente MQTT para IoT y mensajería ligera
+
+# Criptografía
+pycryptodome         # Para encriptación AES, RSA y otras funciones criptográficas
+
+# JWT
+PyJWT                # Librería para codificar y decodificar JWTs
+
+# Utilidades
+python-dotenv        # Carga variables de entorno desde archivos .env
+logging              # Módulo para manejo de logs

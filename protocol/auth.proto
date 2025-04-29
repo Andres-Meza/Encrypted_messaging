@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package auth;
+
+// Servicio de autenticación para validación interna de credenciales
+service Auth {
+  // Método para validar credenciales de usuario
+  rpc Validate (Credentials) returns (ValidationResponse);
+
+  // Método para verificar si un token JWT es válido
+  rpc VerifyToken (TokenRequest) returns (ValidationResponse);
+}
+
+// Credenciales de usuario
+message Credentials {
+  string username = 1;
+  string password = 2;
+}
+
+// Solicitud con token JWT
+message TokenRequest {
+  string token = 1;
+}
+
+// Respuesta de validación
+message ValidationResponse {
+  bool valid = 1;
+  string message = 2;  // Mensaje opcional de error o éxito
+  string user_id = 3;  // ID del usuario si la validación es exitosa
+}
